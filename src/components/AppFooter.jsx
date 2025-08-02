@@ -1,7 +1,7 @@
 export default function AppFooter() {
     return (
         <>
-            <footer className="bg-dark text-white mt-5">
+            <footer className="bg-dark text-white">
                 <div className="container p-4">
                     <div className="row">
 

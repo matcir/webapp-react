@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom"
 export default function AppHeader() {
     return (
         <>
-            <div className="bg-light p-2">
+            <div className="bg-dark p-2">
 
-                <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
                     <NavLink className="navbar-brand" to="/">
                         Movies
                     </NavLink>

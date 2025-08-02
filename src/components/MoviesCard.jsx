@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom"
+
 export default function ({ movie }) {
+
+
     return (
         <>
             <div className="col">
-                <div className="card h-100">
+                <Link to={`/movies/${movie?.id}`} className="card h-100">
                     <figure>
                         <img className="card-img-top img-fluid" src={movie.image} alt="img" />
                     </figure>
@@ -16,7 +20,7 @@ export default function ({ movie }) {
                         <h6>Plot</h6>
                         <p>{movie.abstract}</p>
                     </div>
-                </div>
+                </Link>
             </div >
         </>
     )
