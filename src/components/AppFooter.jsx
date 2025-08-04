@@ -6,7 +6,7 @@ export default function AppFooter() {
                     <div className="row">
 
                         <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-                            <h5 className="text-uppercase">MovieVerse</h5>
+                            <h5>MovieVerse</h5>
                             <p>
                                 Esplora i migliori film, scopri gemme nascoste e resta aggiornato con le ultime uscite.
                             </p>

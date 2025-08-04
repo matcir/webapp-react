@@ -7,7 +7,7 @@ export default function AppHeader() {
 
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
                     <NavLink className="navbar-brand" to="/">
-                        Movies
+                        MovieVerse
                     </NavLink>
 
                     <button
