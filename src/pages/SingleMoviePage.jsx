@@ -35,6 +35,8 @@ export default function SingleMoviePage() {
                         </div>
                     </div>
 
+                    <button className="my-3 btn" style={{ backgroundColor: "#ff6b6b", color: "white" }}>Guarda ora</button>
+
 
                 </div>
 
