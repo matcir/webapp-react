@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import ReviewsAccordion from "../components/ReviewsAccordion"
 
 export default function SingleMoviePage() {
 
+    const navigate = useNavigate()
     const [movie, setMovie] = useState()
     const { id } = useParams()
     const singleMovieUrl = `http://localhost:3000/api/movies/${id}`
@@ -12,6 +13,12 @@ export default function SingleMoviePage() {
         fetch(singleMovieUrl)
             .then(res => res.json())
             .then(data => {
+
+                if (data.error) {
+                    if (data.message === "Not found") {
+                        return navigate("/not-found")
+                    }
+                }
                 setMovie(data)
             })
     }, [singleMovieUrl])
