@@ -6,7 +6,7 @@ import AppLoader from "../components/AppLoader";
 export default function () {
 
     const { movies } = useData();
-    const { loading } = useLoader
+    const { loading } = useLoader();
 
     return (
         <>
