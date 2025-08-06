@@ -1,10 +1,11 @@
 import { createContext, useState, useEffect, useContext } from "react";
+import { useLoader } from "./LoaderContext";
 
 const DataContext = createContext()
 
 function DataProvider({ children }) {
     const moviesUrl = "http://localhost:3000/api/movies"
-    const [loading, setLoading] = useState(true)
+    const { setLoading } = useLoader()
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
@@ -22,24 +23,11 @@ function DataProvider({ children }) {
     }, [moviesUrl])
 
 
-    if (loading) {
-        return (
-            <div className="text-center p-5">
-                <div className="spinner-border text-primary" role="status">
-                    <span className="visually-hidden">Loading data...</span>
-                </div>
-            </div>
-        )
-    }
-
-
     return (
         <DataContext.Provider
             value={{
                 movies,
                 setMovies,
-                loading,
-                setLoading
             }}
         >
             {children}
